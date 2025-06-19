@@ -28,13 +28,11 @@ export const userResolvers = {
         page = 1,
         limit = 10,
         search = '',
-        role,
         sortBy = 'createdAt',
         sortOrder = -1,
       } = args;
 
       const filter: Record<string, any> = {};
-      if (role) filter.role = role;
 
       return await paginateAndSearch(User, {
         page,

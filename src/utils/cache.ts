@@ -23,5 +23,5 @@ export const  deleteCache = async (key : string) : Promise<void> =>{
         await redis.del(key)
     } catch (error : any) {
         console.log(`Error in deleting the cache for the key ${key}` , error);
-  }
+}
 }
